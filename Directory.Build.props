@@ -6,6 +6,7 @@
     <PropertyGroup Label="Packages dependency versions">
        <MicrosoftEntityFrameworkCore>7.0.16</MicrosoftEntityFrameworkCore>
        <AutoMapper>13.0.1</AutoMapper>
+       <NpgsqlEntityFrameworkCorePostgreSQL>7.0.11</NpgsqlEntityFrameworkCorePostgreSQL>
     </PropertyGroup>
 </Project>
 

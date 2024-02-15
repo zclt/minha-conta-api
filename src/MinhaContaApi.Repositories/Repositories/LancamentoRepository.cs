@@ -11,7 +11,7 @@ public class LancamentoRepository : ILancamentoRepository
     public LancamentoRepository(MinhaContaContext context) => _context = context;
 
     public async Task<LancamentoModel> GetAsync(string id) => 
-        await _context.Lancamentos.FirstOrDefaultAsync(x => x.Id == id);
+        await _context.Lancamentos.FirstOrDefaultAsync(x => x.ExternalId == id);
 
     public async Task<IEnumerable<LancamentoModel>> GetAllAsync() =>
         await _context.Lancamentos.ToListAsync();
@@ -25,7 +25,7 @@ public class LancamentoRepository : ILancamentoRepository
 
     public async Task RemoveAsync(string id)
     {
-        var model = await _context.Lancamentos.FirstOrDefaultAsync(x => x.Id == id);
+        var model = await _context.Lancamentos.FirstOrDefaultAsync(x => x.ExternalId == id);
         if(model == default) return;
 
         _context.Remove(model);
