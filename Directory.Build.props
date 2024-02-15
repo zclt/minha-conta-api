@@ -1,0 +1,11 @@
+<Project>
+    <PropertyGroup Label="Сommon properties">
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Packages dependency versions">
+       <MicrosoftEntityFrameworkCore>7.0.16</MicrosoftEntityFrameworkCore>
+       <AutoMapper>13.0.1</AutoMapper>
+    </PropertyGroup>
+</Project>
+
