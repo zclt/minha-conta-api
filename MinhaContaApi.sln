@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "devops", "devops", "{5B35F70A-5F7E-4E7E-BD09-4E67C1F9FE8C}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
+		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
 Global

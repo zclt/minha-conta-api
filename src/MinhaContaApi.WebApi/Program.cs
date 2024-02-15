@@ -12,9 +12,7 @@ builder.Services
     .AddAutoMapper(cfg => cfg.AddMaps(typeof(LancamentoProfile)))
     .AddScoped<ILancamentoService, LancamentoService>()
     .AddScoped<ILancamentoRepository, LancamentoRepository>()
-    .AddDbContext<MinhaContaContext>(opt => opt.UseInMemoryDatabase("test"))
-    
-    ;
+    .AddDbContext<MinhaContaContext>(opt => opt.UseInMemoryDatabase("test"));
 
 builder.Services.AddControllers();
 
