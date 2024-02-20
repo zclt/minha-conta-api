@@ -8,6 +8,10 @@ public class LancamentoProfile : Profile
 {
     public LancamentoProfile()
     {
-        CreateMap<Lancamento, LancamentoModel>().ReverseMap();
+        CreateMap<LancamentoModel, Lancamento>()
+            .ForMember(m => m.Id, o => o.MapFrom(s => s.ExternalId));
+        CreateMap<Lancamento, LancamentoModel>()
+            .ForMember(m => m.Id, o => o.Ignore())
+            .ForMember(m => m.ExternalId, o => o.MapFrom(s => s.Id));
     }
 }
