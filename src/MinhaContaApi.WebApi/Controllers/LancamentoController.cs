@@ -27,7 +27,6 @@ public class LancamentoController : ControllerBase
         await _service.AddAsync(new Lancamento
         {
             Id = Guid.NewGuid().ToString(),
-            UserId = Guid.NewGuid().ToString(),
             Descricao = input.Descricao,
             Data = input.Data,
             Valor = input.Valor
