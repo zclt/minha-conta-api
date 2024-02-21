@@ -26,7 +26,7 @@ public class LancamentoController : ControllerBase
     public async Task<Lancamento> AddAsync([FromBody]LancamentoInputDto input) =>
         await _service.AddAsync(new Lancamento
         {
-            ExternalId = Guid.NewGuid().ToString(),
+            Id = Guid.NewGuid().ToString(),
             UserId = Guid.NewGuid().ToString(),
             Descricao = input.Descricao,
             Data = input.Data,
