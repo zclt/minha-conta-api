@@ -12,8 +12,17 @@ builder.Services
     .AddAutoMapper(cfg => cfg.AddMaps(typeof(LancamentoProfile)))
     .AddScoped<ILancamentoService, LancamentoService>()
     .AddScoped<ILancamentoRepository, LancamentoRepository>()
-    .AddDbContext<MinhaContaContext>(opt => 
-        opt.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
+    .AddDbContext<MinhaContaContext>(opt => {
+        var provider = builder.Configuration.GetConnectionString("Provider");
+        switch(provider) {
+            case "postgres": 
+                opt.UseNpgsql(builder.Configuration.GetConnectionString("Database"));
+                break;
+            default: 
+                opt.UseInMemoryDatabase("DataBase");
+                break;
+        }
+    }); 
 
 builder.Services.AddControllers();
 

@@ -32,6 +32,7 @@ public class LancamentoService : ILancamentoService
     public async Task<Lancamento> AddAsync(Lancamento entity)
     {
         var model = _mapper.Map<LancamentoModel>(entity);
+        model.UserId = Guid.NewGuid().ToString(); //TODO add logged user
         await _repository.AddAsync(model);
         return _mapper.Map<Lancamento>(model);
     }

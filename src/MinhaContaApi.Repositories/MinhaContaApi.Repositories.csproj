@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(MicrosoftEntityFrameworkCore)" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="$(MicrosoftEntityFrameworkCoreInMemory)" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="$(NpgsqlEntityFrameworkCorePostgreSQL)" />
     </ItemGroup>
     
