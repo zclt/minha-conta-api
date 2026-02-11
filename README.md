@@ -28,7 +28,7 @@ Uma API RESTful para gerenciamento de lançamentos financeiros desenvolvida com 
 docker build . -t minhaconta
 
 # Executar o container
-docker run --name minhaconta -p 8081:80 -d minhaconta
+docker run --name minhaconta -p 8081:8080 -d minhaconta
 ```
 
 ### Opção 2: Desenvolvimento Local
@@ -56,15 +56,15 @@ dotnet run --project ./src/MinhaContaApi.WebApi
 
 | Método | Endpoint | Descrição |
 |--------|----------|-----------|
-| `GET` | `/lancamento` | Listar todos os lançamentos |
-| `GET` | `/lancamento/{id}` | Buscar lançamento por ID |
-| `POST` | `/lancamento` | Criar novo lançamento |
-| `DELETE` | `/lancamento/{id}` | Excluir lançamento |
+| `GET` | `/Lancamento` | Listar todos os lançamentos |
+| `GET` | `/Lancamento/{id}` | Buscar lançamento por ID |
+| `POST` | `/Lancamento` | Criar novo lançamento |
+| `DELETE` | `/Lancamento/{id}` | Excluir lançamento |
 
 ### Exemplo de Request
 
 ```json
-POST /lancamento
+POST /Lancamento
 {
   "descricao": "Compra de material de escritório",
   "data": "2024-01-15",
