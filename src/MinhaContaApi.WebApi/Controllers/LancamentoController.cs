@@ -16,10 +16,10 @@ public class LancamentoController : ControllerBase
     [HttpGet]
     public async Task<IEnumerable<Lancamento>> GetAllAsync() => await _service.GetAllAsync();
 
-    [HttpGet("/{id}")]
+    [HttpGet("{id}")]
     public async Task<Lancamento> GetAsync(string id) => await _service.GetAsync(id);
 
-    [HttpDelete("/{id}")]
+    [HttpDelete("{id}")]
     public async Task RemoveAsync(string id) => await _service.RemoveAsync(id);
 
     [HttpPost]

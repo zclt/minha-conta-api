@@ -1,13 +1,13 @@
 <Project>
     <PropertyGroup Label="Сommon properties">
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
 
     <PropertyGroup Label="Packages dependency versions">
-        <MicrosoftEntityFrameworkCore>7.0.16</MicrosoftEntityFrameworkCore>
+        <MicrosoftEntityFrameworkCore>8.0.13</MicrosoftEntityFrameworkCore>
         <AutoMapper>13.0.1</AutoMapper>
-        <NpgsqlEntityFrameworkCorePostgreSQL>7.0.11</NpgsqlEntityFrameworkCorePostgreSQL>
-        <MicrosoftEntityFrameworkCoreInMemory>7.0.16</MicrosoftEntityFrameworkCoreInMemory>
+        <NpgsqlEntityFrameworkCorePostgreSQL>8.0.4</NpgsqlEntityFrameworkCorePostgreSQL>
+        <MicrosoftEntityFrameworkCoreInMemory>8.0.13</MicrosoftEntityFrameworkCoreInMemory>
         <SwashbuckleAspNetCore>6.5.0</SwashbuckleAspNetCore>
     </PropertyGroup>
 </Project>
